@@ -7,7 +7,6 @@ JQ_PATH="../../jq"
 # Instance ID
 IID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 
-echo $IID
 
 ## Get VPC ##
 macid=$(curl -s http://169.254.169.254/latest/meta-data/network/interfaces/macs/)
@@ -28,6 +27,12 @@ aws ec2 modify-instance-attribute --instance-id $IID --groups $GID $SID
 
 aws ec2 authorize-security-group-ingress --group-id $GID --protocol icmp --port -1 --cidr 0.0.0.0/0
 
-
+#ECHO OUTPUT:
+echo "Status:"
+echo "PING: Enabled"
+echo "Instance ID: $IID"
+echo "MAC ID: $macid"
+echo "VPC ID: $VPC"
+echo "New Security Group ID: $GID"
 
 
