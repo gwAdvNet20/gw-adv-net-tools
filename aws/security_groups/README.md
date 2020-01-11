@@ -26,6 +26,20 @@ So to open port 80 on security group:
 ./add_new_rule.sh sg-0ed7adab0169a69d5 80
 ```
 
+# delete_rule.sh
+
+This script allows you to delete a rule from a given security group. You can run it like so:
+
+```
+./delete_rule.sh security-group-id portNumber
+```
+
+So to remove access to port 80 on security group:
+
+```
+./delete_rule.sh sg-0ed7adab0169a69d5 80
+```
+
 # fetch_security_group_id.sh
 
 This script allows you to fetch the security group details for a given security group name. Use it to fetch the id if you forget it.
