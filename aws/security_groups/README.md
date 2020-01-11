@@ -39,3 +39,11 @@ To fetch the data for `add-public-access`, run:
 ```
 ./fetch_security_group_id add-public-access
 ```
+
+# fetch_instance_metadata.sh
+
+This script allows you to fetch the public ip and hostname for your instance. Simply run the following:
+
+```
+./fetch_instance_metadata.sh
+```
