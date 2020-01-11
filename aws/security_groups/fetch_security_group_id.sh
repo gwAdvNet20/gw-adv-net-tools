@@ -2,7 +2,7 @@
 
 
 if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 security-group-id"
+    echo "Usage: $0 security-group-name"
     exit
 fi
 
