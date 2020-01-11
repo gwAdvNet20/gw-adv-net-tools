@@ -26,9 +26,8 @@ GID=$(aws ec2 create-security-group --group-name add-public-access --description
 aws ec2 modify-instance-attribute --instance-id $IID --groups $GID $SID
 
 
-aws ec2 authorize-security-group-ingress \
-    --group-id $GID \
-    --ip-permissions IpProtocol=icmp,FromPort=3,ToPort=4,IpRanges='[{CidrIp=0.0.0.0/0}]'
+aws ec2 authorize-security-group-ingress --group-id $GID --protocol icmp --port -1 --cidr 0.0.0.0/0
+
 
 
 
