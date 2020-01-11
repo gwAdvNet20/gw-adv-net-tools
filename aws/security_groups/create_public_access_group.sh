@@ -33,6 +33,7 @@ echo "PING: Enabled"
 echo "Instance ID: $IID"
 echo "MAC ID: $macid"
 echo "VPC ID: $VPC"
+echo "New Security Group Name: add-public-access"
 echo "New Security Group ID: $GID"
 
 
