@@ -13,3 +13,7 @@ PORT=$2
 aws ec2 revoke-security-group-ingress --group-id  $SID --protocol tcp --port $PORT --cidr 0.0.0.0/0
 
 aws ec2 revoke-security-group-egress --group-id  $SID --protocol tcp --port $PORT --cidr 0.0.0.0/0
+
+aws ec2 revoke-security-group-ingress --group-id  $SID --protocol udp --port $PORT --cidr 0.0.0.0/0
+
+aws ec2 revoke-security-group-egress --group-id  $SID --protocol udp --port $PORT --cidr 0.0.0.0/0

@@ -26,4 +26,21 @@ aws ec2 authorize-security-group-egress \
     --cidr 0.0.0.0/0
 
 
+
+## Adding inbound UDP
+aws ec2 authorize-security-group-ingress \
+    --group-id $SID \
+    --protocol udp \
+    --port $PORT \
+    --cidr 0.0.0.0/0
+
+
+##Adding outbound UDP
+aws ec2 authorize-security-group-egress \
+    --group-id $SID \
+    --protocol udp \
+    --port $PORT \
+    --cidr 0.0.0.0/0
+
+
 echo "Successfully added PORT $PORT"
